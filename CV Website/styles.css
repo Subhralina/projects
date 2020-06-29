@@ -1,0 +1,38 @@
+body {
+  background-color: #ecfbfc;
+}
+
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-color: grey;
+  border-width: 5px;
+  width: 10%;
+}
+h1 {
+  color: #66bfbf;
+  margin-top: 0;
+}
+h3 {
+  color: #66bfbf;
+  margin-left: 20px;
+}
+h4{
+  margin-left: 20px;
+}
+p{
+  text-align: justify;
+}
+table{
+  text-align: left;
+}
+.education{
+  vertical-align: baseline;
+}
+.adjust{
+  margin-bottom: 0;
+}
+.description{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
