@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body class="dark-theme">
+  <div id="top-bg"></div>
+
+  <div class="body">
+    <label for="theme-switch" style="color: red"></label>
+    <div class="header">
+      <div class="header-item">
+        <div class="title">
+          Social Media Dashboard
+        </div>
+        <div class="total-followers">
+          Total Followers: 23,004
+        </div>
+      </div>
+
+      <div class="header-item">
+        <div class="theme">
+          <label id="theme-label">
+            Dark Mode
+          </label>
+          <label class="switch">
+            <input type="checkbox" id="slider" onclick="change_theme(this)">
+            <span class="slider round"></span>
+          </label>
+          <!-- <input type="checkbox" id="theme-switch"> -->
+        </div>
+      </div>
+    </div>
+
+    <section class="majors cards-container">
+      <div class="major-card facebook">
+        <div class="major-card-header">
+          <img src="./images/icon-facebook.svg">
+          <div class="username">@nathanf</div>
+        </div>
+        <div>
+          <div class="number">1987</div>
+          <div class="tag">Followers</div>
+        </div>
+        <div class="positive change">
+          <img class="arrow" src="./images/icon-up.svg">12 Today
+        </div>
+      </div>
+      <div class="major-card twitter">
+        <div class="major-card-header">
+          <img src="./images/icon-twitter.svg">
+          <div class="username">@nathanf</div>
+        </div>
+        <div>
+          <div class="number">1044</div>
+          <div class="tag">Followers</div>
+        </div>
+        <div class="positive change">
+          <img class="arrow" src="./images/icon-up.svg">99 Today
+        </div>
+      </div>
+      <div class="major-card instagram">
+        <div class="major-card-header">
+          <img src="./images/icon-instagram.svg">
+          <div class="username">@realnathanf</div>
+        </div>
+        <div>
+          <div class="number">11k</div>
+          <div class="tag">Followers</div>
+        </div>
+        <div class="positive change">
+          <img class="arrow" src="./images/icon-up.svg">1099 Today
+        </div>
+      </div>
+      <div class="major-card youtube">
+        <div class="major-card-header">
+          <img src="./images/icon-youtube.svg">
+          <div class="username">Nathan F.</div>
+        </div>
+        <div>
+          <div class="number">8239</div>
+          <div class="tag">Subscribers</div>
+        </div>
+        <div class="negative change">
+          <img class="arrow" src="./images/icon-down.svg">144 Today
+        </div>
+      </div>
+    </section>
+
+    <div class="overview">
+      Overview - Today
+    </div>
+
+    <section class="minors cards-container">
+      <div class="minor-card">
+        <div>
+          <div class="tag">Page Views</div>
+          <img src="./images/icon-facebook.svg">
+        </div>
+        <div>
+          <div class="number">87</div>
+          <div class="positive change">
+            <div>
+              <img class="arrow" src="./images/icon-up.svg">3%
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="minor-card">
+        <div>
+          <div class="tag">Likes</div>
+          <img src="./images/icon-facebook.svg">
+        </div>
+        <div>
+          <div class="number">52</div>
+          <div class="negative change">
+            <div>
+              <img class="arrow" src="./images/icon-down.svg">2%
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="minor-card">
+        <div>
+          <div class="tag">Likes</div>
+          <img src="./images/icon-instagram.svg">
+        </div>
+        <div>
+          <div class="number">5462</div>
+          <div class="positive change">
+            <div>
+              <img class="arrow" src="./images/icon-up.svg">2257%
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="minor-card">
+        <div>
+          <div class="tag">Profile Views</div>
+          <img src="./images/icon-instagram.svg">
+        </div>
+        <div>
+          <div class="number">52k</div>
+          <div class="positive change">
+            <div>
+              <img class="arrow" src="./images/icon-up.svg">1375%
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="minor-card">
+        <div>
+          <div class="tag">Retweets</div>
+          <img src="./images/icon-twitter.svg">
+        </div>
+        <div>
+        <div class="number">117</div>
+          <div class="positive change">
+            <div>
+              <img class="arrow" src="./images/icon-up.svg">303%
+            </div>
+          </div>
+          </div>
+      </div>
+      <div class="minor-card">
+        <div>
+          <div class="tag">Likes</div>
+          <img src="./images/icon-twitter.svg">
+        </div>
+        <div>
+          <div class="number">507</div>
+          <div class="positive change">
+            <div>
+              <img class="arrow" src="./images/icon-up.svg">553%
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="minor-card">
+        <div>
+          <div class="tag">Likes</div>
+          <img src="./images/icon-youtube.svg">
+        </div>
+        <div>
+          <div class="number">107</div>
+          <div class="negative change">
+            <div>
+              <img class="arrow" src="./images/icon-down.svg">19%
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="minor-card">
+        <div>
+          <div class="tag">Total Views</div>
+          <img src="./images/icon-youtube.svg">
+        </div>
+        <div>
+          <div class="number">1407</div>
+          <div class="negative change">
+            <div>
+              <img class="arrow" src="./images/icon-down.svg">12%
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="attribution">
+    &copy; 2020 Subhralina Nayak
+  </div>
+
+  <script>
+    document.getElementById('slider').checked = false;
+
+    function change_theme() {
+      const body = document.getElementsByTagName('body')[0];
+      const check = document.getElementById('slider');
+      const label = document.getElementById('theme-label');
+
+      let text = 'Dark Theme';
+      let themeAdd = 'dark-theme';
+      let themeRemove = 'light-theme';
+
+      if (check.checked) {
+        text = 'Light Theme';
+        themeAdd = 'light-theme';
+        themeRemove = 'dark-theme';
+      }
+
+      body.classList.replace(themeRemove, themeAdd);
+      label.innerHTML = text;
+    }
+  </script>
+
+</body>
+</html>

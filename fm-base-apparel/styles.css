@@ -1,0 +1,232 @@
+:root {   
+    /* colors */
+    --background-color: #fafafa;
+    --black: #443b3c;
+    --light-pink: hsl(0, 36%, 70%);
+    --red: hsl(0, 93%, 68%);
+    --input-color: #dccccf;
+
+    /* fonts */
+    --base-font: 'Josefin Sans', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html {
+    font-size: 10px;
+    font-family: var(--base-font);
+}
+
+body {
+
+    background-color: var(--background-color);
+}
+
+.visually__hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.header {
+    padding: 0 5%;
+}
+
+.hidden {
+    display: none;
+}
+
+.landing__hero {
+    background-image: url('images/hero-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+}
+
+.landing__text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.landing__text__header {
+    color: var(--black); 
+    font-size: 4.3rem;
+    max-width: 275px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.landing__text__header--pink {
+    display: block;
+    color: var(--light-pink);
+    font-weight: 300;
+}
+
+.landing__text__intro {
+    color: var(--light-pink);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 0 auto 35px auto;
+    max-width: 320px;
+    text-align: center;
+}
+
+.landing__text__form {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.landing__text__email {
+    background: transparent;
+    border-bottom: 1px solid var(--input-color);
+    border-left: 1px solid var(--input-color);
+    border-top: 1px solid var(--input-color);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color: var(--light-pink);
+    font-size: 1.6rem;
+    padding: 10px 15px;
+    width: 65%;
+}
+
+.landing__text__email::placeholder {
+    color: #e8dada;
+}
+
+.landing__text__email--red {
+    background-image: url("images/icon-error.svg");
+    background-position: 84% center;
+    background-repeat: no-repeat;
+    background-size: 10%;
+    border-color: var(--red);
+    color: var(--red);
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.landing__text__button {
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: 1px solid var(--light-pink);
+    border-radius: 50px;
+    box-shadow: 5px 10px 20px 10px rgba(206, 151, 151, 0.3);
+    color: var(--background-color);
+    font-size: 1.6rem;
+    margin-left: -17px;
+    padding: 7px 35px 6px 35px;
+}
+
+.landing__text__button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(135deg, hsl(0, 74%, 74%), hsl(0, 74%, 74%));
+}
+
+.signup__form__warning {
+    color: var(--red)
+}
+
+.footer { 
+    margin: 75px auto 0 auto;
+    text-align: center; 
+}
+
+@media (min-width: 600px) {
+    main {
+        align-items: stretch; 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+        justify-items: stretch;
+    }
+
+    .landing__hero { 
+        background-position: -225px 0;
+        height: unset;
+        order: 2;
+    }
+
+    .landing__text {
+        align-items: flex-start;
+        background-image: url(/images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        order: 1;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .landing__text__header,
+    .landing__text__intro,
+    .landing__text__form {
+        margin: 0;
+        max-width: 610px;
+        text-align: left;
+    }
+
+    .landing__text__header { 
+        font-size: 5.5rem;
+        letter-spacing: 2rem;
+        max-width: 400px;
+    }
+
+    .landing__text__intro {
+        font-size: 1.7rem;
+        line-height: 1.8;
+        margin: 50px 0;
+        max-width: 475px;
+    }
+
+    .landing__text__email--red { 
+        background-size: 5%;
+        background-position: 90% center;
+    }
+
+    .landing__text__form { 
+        justify-content: flex-start;
+    }
+
+    .signup__form__warning { 
+        padding-left: 10px;
+    }
+
+    .header {
+        left: 5%;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 5%;
+    }
+
+    .footer {
+        bottom: 25px;
+        left: 5%;
+        position: absolute;
+    }
+}
+
+@media (min-width: 1100px) {
+    main {
+        align-items: stretch; 
+        display: grid;
+        grid-template-columns: 1fr minmax(300px, 610px);
+        height: 100vh;
+        justify-items: stretch;
+    }
+
+    .landing__hero { 
+        background-position: unset;
+    }
+
+
+}
